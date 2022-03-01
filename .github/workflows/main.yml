@@ -6,11 +6,6 @@ on:
       - convert
       - data
   workflow_dispatch:
-    inputs:
-      title:
-        description: "Title"
-        required: true
-        default: "Hello"
 jobs:
   build:
     runs-on: ubuntu-latest
