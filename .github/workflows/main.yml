@@ -1,6 +1,6 @@
 name: Build
 
-on: push:
+on: push
 jobs:
   pages:
     build: egonelbre/debug-github-workflow/.github/workflows/build-pages.yml@main
