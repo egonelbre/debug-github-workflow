@@ -1,4 +1,4 @@
-name: Build
+name: Build Pages
 
 on:
   workflow_call:
