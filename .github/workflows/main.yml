@@ -3,4 +3,4 @@ name: Build
 on: push
 jobs:
   pages:
-    uses: egonelbre/debug-github-workflow/.github/workflows/build-pages.yml@main
+    uses: egonelbre/debug-github-workflow/.github/workflows/main.yml@convert
