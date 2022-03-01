@@ -1,6 +1,23 @@
 name: Build
 
-on: push
+on:
+  push
+  workflow_call:
+  workflow_dispatch:
 jobs:
-  pages:
-    uses: egonelbre/debug-github-workflow/.github/workflows/build-pages.yml@main
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Convert
+        uses: actions/checkout@v2
+        with:
+          ref: convert
+
+      - name: Checkout DCS Docs
+        uses: actions/checkout@v2
+        with:
+          ref: data
+          path: data
+
+      - name: Run Build
+        run: make build
